@@ -1,11 +1,11 @@
 Turn WPF binding errors into exceptions
 =
 
-This project demonstrate out you can easily convert WPF binding errors into exception.
+This project demonstrates how you can easily convert WPF binding errors into exception.
     
 ![Exception show in Visual Studio](Pictures/XamlParseException.png)
 
-Integrating this in your project is as easy as:
+You can use it in your project by adding a single line:
     
 ![Exception show in Visual Studio](Pictures/BindingExceptionThrowerAttach.png)
 
