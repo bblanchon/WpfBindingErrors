@@ -12,7 +12,10 @@ using System.Text;
 
 namespace WpfBindingErrors
 {
-    sealed class TraceListener : DefaultTraceListener
+    /// <summary>
+    /// A TraceListener that raise an event each time a trace is written
+    /// </summary>
+    sealed class ObservableTraceListener : DefaultTraceListener
     {
         StringBuilder buffer = new StringBuilder();
 

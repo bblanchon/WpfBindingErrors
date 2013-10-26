@@ -16,7 +16,7 @@ namespace WpfBindingErrors
     /// </summary>
     public sealed class BindingErrorListener : IDisposable
     {      
-        readonly TraceListener traceListener;
+        readonly ObservableTraceListener traceListener;
 
         static BindingErrorListener()
         {
@@ -25,7 +25,7 @@ namespace WpfBindingErrors
 
         public BindingErrorListener()
         {
-            traceListener = new TraceListener();
+            traceListener = new ObservableTraceListener();
             PresentationTraceSources.DataBindingSource.Switch.Level = SourceLevels.Error;
             PresentationTraceSources.DataBindingSource.Listeners.Add(traceListener);
         }
@@ -36,6 +36,9 @@ namespace WpfBindingErrors
             traceListener.Dispose();
         }      
 
+        /// <summary>
+        /// Event raised each time a WPF binding error occurs
+        /// </summary>
         public event Action<string> ErrorCatched
         {
             add { traceListener.TraceCatched += value; }

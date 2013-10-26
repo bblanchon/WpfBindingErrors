@@ -10,6 +10,9 @@ using System;
 
 namespace WpfBindingErrors
 {
+    /// <summary>
+    /// Exception thrown by the BindingExceptionThrower each time a WPF binding error occurs
+    /// </summary>
     [Serializable]
     public class BindingException : Exception
     {

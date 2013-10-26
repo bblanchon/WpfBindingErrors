@@ -8,23 +8,32 @@
 
 namespace WpfBindingErrors
 {
+    /// <summary>
+    /// Converts WPF binding error into BindingException
+    /// </summary>
     public static class BindingExceptionThrower
     {
         static BindingErrorListener errorListener;
 
+        /// <summary>
+        /// Start listening WPF binding error
+        /// </summary>
         public static void Attach()
         {
             errorListener = new BindingErrorListener();
             errorListener.ErrorCatched += OnErrorCatched;
         }
 
+        /// <summary>
+        /// Stop listening WPF binding error
+        /// </summary>
         public static void Detach()
         {
             errorListener.ErrorCatched -= OnErrorCatched;
             errorListener.Dispose();
             errorListener = null;
         }
-
+        
         public static bool IsAttached
         {
             get { return errorListener != null; }
