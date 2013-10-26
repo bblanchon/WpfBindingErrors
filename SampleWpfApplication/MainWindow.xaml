@@ -5,7 +5,7 @@
         Title="MainWindow" Height="112" Width="349"
         DataContext="{Binding Main, Source={StaticResource ViewModelLocator}}">
     <StackPanel>
-        <Label>This is supposed to throw a BindingExecption at runtime</Label>        
+        <Label>This is supposed to throw a BindingException at runtime</Label>        
         <UniformGrid Rows="2" Columns="2">
             <Label Content="GoodBinding" />
             <Label Content="{Binding GoodBinding}" />
