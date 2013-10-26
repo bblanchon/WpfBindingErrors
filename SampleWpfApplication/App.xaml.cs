@@ -23,5 +23,10 @@ namespace SampleWpfApplication
             // a binding error occurs
             BindingExceptionThrower.Attach();
         }
+
+        private void OnDispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+        {
+            MessageBox.Show(e.Exception.ToString(), "App.OnDispatcherUnhandledException()", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
     }
 }
