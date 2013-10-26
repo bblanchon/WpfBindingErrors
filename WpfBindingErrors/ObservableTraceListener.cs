@@ -15,7 +15,7 @@ namespace WpfBindingErrors
     /// <summary>
     /// A TraceListener that raise an event each time a trace is written
     /// </summary>
-    sealed class ObservableTraceListener : DefaultTraceListener
+    sealed class ObservableTraceListener : TraceListener
     {
         StringBuilder buffer = new StringBuilder();
 
