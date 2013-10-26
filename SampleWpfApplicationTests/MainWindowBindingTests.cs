@@ -4,7 +4,7 @@ using SampleWpfApplication;
 using WpfBindingErrors;
 using System.Windows;
 
-namespace UnitTestProject
+namespace SampleWpfApplicationTests
 {
     [TestClass]
     public class MainWindowBindingTests

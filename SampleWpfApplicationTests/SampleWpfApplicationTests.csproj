@@ -6,8 +6,8 @@
     <ProjectGuid>{1B489CBC-FA1D-4997-A713-A52112C8778C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UnitTestProject</RootNamespace>
-    <AssemblyName>UnitTestProject</AssemblyName>
+    <RootNamespace>SampleWpfApplicationTests</RootNamespace>
+    <AssemblyName>SampleWpfApplicationTests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
