@@ -10,13 +10,13 @@ namespace SampleWpfApplicationTests
     public class MainWindowBindingTests
     {
         [TestMethod]
-        public void MainWindows_Constructor_DoesNotThrow()
+        public void MainWindow_Constructor_DoesNotThrow()
         {
             AssertDoesNotThrow(() => new MainWindow());
         }
 
         [TestMethod]
-        public void MainWindows_HasNoBindingError()
+        public void MainWindow_HasNoBindingError()
         {
             // NB: this test must fail !
             // it's the goal of this project: to show that we can
