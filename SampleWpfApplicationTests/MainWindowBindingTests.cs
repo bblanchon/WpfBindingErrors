@@ -19,31 +19,35 @@ namespace UnitTestProject
         public void MainWindows_HasNoBindingError()
         {
             // NB: this test must fail !
-            // it's the goal of this project: to show that we can raise exceptions
+            // it's the goal of this project: to show that we can
+            // detect binding errors in a unit test
 
             using( var listener = new BindingErrorListener())
             {
                 listener.ErrorCatched += msg => Assert.Fail(msg);
 
-                var win = new MainWindow();
+                AssertDoesNotThrow(() => new MainWindow());
             }            
         }
 
         static MainWindowBindingTests()
         {
-            var dictUri = new Uri("/SampleWpfApplication;component/Resources.xaml", UriKind.Relative);
-            var dict = Application.LoadComponent(dictUri) as ResourceDictionary;
+            // Load the resources required to create MainWindow
+            // (in this case, we need ViewModelLocator)
+            // The trick is to move resources into a dedicated file, instead of App.xaml           
+
+            var resourcesUri = new Uri("/SampleWpfApplication;component/Resources.xaml", UriKind.Relative);
+            var resources = Application.LoadComponent(resourcesUri) as ResourceDictionary;
 
             var app = new Application();
-            app.Resources.MergedDictionaries.Add(dict);
+            app.Resources.MergedDictionaries.Add(resources);
         }
 
-        static void AssertDoesNotThrow<T>(Func<T> func)
+        static void AssertDoesNotThrow(Action action)
         {
-            T value;
             try
             {
-                value = func();
+                action();
             }
             catch(Exception e)
             {
