@@ -12,8 +12,8 @@ All it requires is a single line in your existing code.
 Content
 -
 
- 1. [Project `WpfBindingError`](WpfBindingError) is a reusable assembly that listens for binding errors.
- 2. [Project `SampleWpfApplication`](SampleWpfApplication) shows how to throw `BindingException` at runtime
- 3. [Project `SampleWpfApplicationTests`](SampleWpfApplicationTests) shows how to check binding errors in a **unit test project**.
+ 1. [Project WpfBindingError](WpfBindingError/README.md) is a reusable assembly that listens for binding errors.
+ 2. [Project SampleWpfApplication](SampleWpfApplication/README.md) shows how to throw `BindingException` at runtime.
+ 3. [Project SampleWpfApplicationTests](SampleWpfApplicationTests/README.md) shows how to check binding errors in a **unit test project**.
  
  Each project contains its own README, please check.
