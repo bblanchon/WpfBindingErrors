@@ -18,6 +18,9 @@ namespace SampleWpfApplication
         {
             base.OnStartup(e);
 
+            // Start listening for WPF binding error.
+            // After that line, a BindingException will be thrown each time
+            // a binding error occurs
             BindingExceptionThrower.Attach();
         }
     }

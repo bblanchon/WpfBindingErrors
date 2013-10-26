@@ -5,6 +5,10 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <!-- 
+                Resources are moved out from App.xaml so as to be easily loadable in Unit Test project.
+                If you don't want to test, you can put it back in App.xaml.
+                -->
                 <ResourceDictionary Source="Resources.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
