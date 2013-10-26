@@ -12,7 +12,7 @@ namespace SampleWpfApplicationTests
         [TestMethod]
         public void MainWindow_Constructor_DoesNotThrow()
         {
-            AssertDoesNotThrow(() => new MainWindow());
+            new MainWindow();
         }
 
         [TestMethod]
@@ -26,7 +26,7 @@ namespace SampleWpfApplicationTests
             {
                 listener.ErrorCatched += msg => Assert.Fail(msg);
 
-                AssertDoesNotThrow(() => new MainWindow());
+                new MainWindow();
             }            
         }
 
@@ -41,18 +41,6 @@ namespace SampleWpfApplicationTests
 
             var app = new Application();
             app.Resources.MergedDictionaries.Add(resources);
-        }
-
-        static void AssertDoesNotThrow(Action action)
-        {
-            try
-            {
-                action();
-            }
-            catch(Exception e)
-            {
-                Assert.Fail(e.Message);
-            }
         }
     }
 }
