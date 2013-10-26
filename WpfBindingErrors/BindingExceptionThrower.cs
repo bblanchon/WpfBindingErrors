@@ -6,6 +6,7 @@
  * http://tech.pro/tutorial/940/wpf-snippet-detecting-binding-errors
  */
 
+using System.Diagnostics;
 namespace WpfBindingErrors
 {
     /// <summary>
@@ -39,6 +40,7 @@ namespace WpfBindingErrors
             get { return errorListener != null; }
         }
 
+        [DebuggerStepThrough]
         static void OnErrorCatched(string message)
         {
             throw new BindingException(message);

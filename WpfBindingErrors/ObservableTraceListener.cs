@@ -24,6 +24,7 @@ namespace WpfBindingErrors
             buffer.Append(message);
         }
 
+        [DebuggerStepThrough]
         public override void WriteLine(string message)
         {
             buffer.Append(message);
