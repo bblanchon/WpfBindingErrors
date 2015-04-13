@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/bblanchon/WpfBindingErrors</projectUrl>
     <!-- <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl> -->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Ever got called by a client that the GUI is showing non-sensical or no data at all? This package enables your application to fail-fast on WPF Binding errors.</description>
+    <description>Throw an exception when a WPF Binding error occurs. Get started by adding WpfBindingErrors.BindingExceptionThrower.Attach(); to your WPF application.</description>
     <releaseNotes>Initial Release</releaseNotes>
     <copyright>Copyright 2015</copyright>
     <tags>WPF Binding DataBinding Error</tags>
