@@ -1,0 +1,1 @@
+.nuget\nuget.exe pack WpfBindingErrors\WpfBindingErrors.csproj -properties "Configuration=Release"

@@ -1,6 +1,4 @@
 ﻿using System.Reflection;
-using System.Resources;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows;
 
@@ -10,7 +8,7 @@ using System.Windows;
 [assembly: AssemblyTitle("WpfBindingErrors")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Benoit Blanchon")]
 [assembly: AssemblyProduct("WpfBindingErrors")]
 [assembly: AssemblyCopyright("Copyright © Benoit Blanchon 2013")]
 [assembly: AssemblyTrademark("")]
@@ -51,5 +49,4 @@ using System.Windows;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("0.1.0")]
