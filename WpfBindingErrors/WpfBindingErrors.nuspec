@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <!-- <title>$title$</title> -->
+    <authors>$author$</authors>
+    <!-- <owners>$author$</owners> -->
+    <!-- <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl> -->
+    <projectUrl>https://github.com/bblanchon/WpfBindingErrors</projectUrl>
+    <!-- <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl> -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Ever got called by a client that the GUI is showing non-sensical or no data at all? This package enables your application to fail-fast on WPF Binding errors.</description>
+    <releaseNotes>Initial Release</releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <tags>WPF Binding DataBinding Error</tags>
+  </metadata>
+</package>
