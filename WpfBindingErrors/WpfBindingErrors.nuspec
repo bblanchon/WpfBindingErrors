@@ -1,18 +1,22 @@
-<?xml version="1.0"?>
-<package >
-  <metadata>
-    <id>$id$</id>
-    <version>$version$</version>
-    <!-- <title>$title$</title> -->
-    <authors>$author$</authors>
-    <!-- <owners>$author$</owners> -->
-    <licenseUrl>https://github.com/bblanchon/WpfBindingErrors/blob/master/LICENSE.md</licenseUrl>
-    <projectUrl>https://github.com/bblanchon/WpfBindingErrors</projectUrl>
-    <!-- <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl> -->
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Throw an exception when a WPF Binding error occurs. Get started by adding WpfBindingErrors.BindingExceptionThrower.Attach(); to your WPF application.</description>
-    <releaseNotes>Initial Release</releaseNotes>
-    <copyright>Copyright 2015</copyright>
-    <tags>WPF Binding DataBinding Error</tags>
-  </metadata>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>WpfBindingErrors</id>
+        <version>1.0</version>
+        <authors>Benoit Blanchon</authors>
+        <licenseUrl>https://github.com/bblanchon/WpfBindingErrors/blob/master/LICENSE.md</licenseUrl>
+        <projectUrl>https://github.com/bblanchon/WpfBindingErrors</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Throw an exception when a WPF Binding error occurs. Get started by adding WpfBindingErrors.BindingExceptionThrower.Attach(); to your WPF application.</description>
+        <releaseNotes>Added assemblys for .NET Framework 3.5, 4.0, 4.5.1, 4.5.2 and 4.6</releaseNotes>
+        <copyright>Copyright 2015</copyright>
+        <tags>WPF Binding DataBinding Error</tags>
+    </metadata>
+    <files>
+        <file src="bin\.NET Framework 4\WpfBindingErrors.dll" target="lib\net40\WpfBindingErrors.dll" />
+        <file src="bin\.NET Framework 4.5\WpfBindingErrors.dll" target="lib\net45\WpfBindingErrors.dll" />
+        <file src="bin\.NET Framework 4.5.1\WpfBindingErrors.dll" target="lib\net451\WpfBindingErrors.dll" />
+        <file src="bin\.NET Framework 4.5.2\WpfBindingErrors.dll" target="lib\net452\WpfBindingErrors.dll" />
+        <file src="bin\.NET Framework 4.6\WpfBindingErrors.dll" target="lib\net46\WpfBindingErrors.dll" />
+    </files>
 </package>
