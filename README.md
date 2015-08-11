@@ -9,6 +9,14 @@ All it requires is a single line in your existing code.
     
 ![Exception show in Visual Studio](SampleWpfApplication/Pictures/BindingExceptionThrowerAttach.png)
 
+Install with NuGet:
+-
+
+    PM> Install-Package WpfBindingErrors
+
+https://www.nuget.org/packages/WpfBindingErrors
+
+
 Content
 -
 
