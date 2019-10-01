@@ -7,7 +7,20 @@ This project demonstrates how you can easily convert WPF binding errors into exc
 
 All it requires is a single line in your existing code.
     
-![Exception show in Visual Studio](SampleWpfApplication/Pictures/BindingExceptionThrowerAttach.png)
+```csharp
+public partial class App : Application
+{
+    protected override void OnStartup(StartupEventArgs args)
+    {
+        base.OnStartup(args);
+        
+        // start listening for WPF binding error
+        // after that line, a BindingException will be thrown each time
+        // a binding error occurs.
+        BindingExceptionThrower.Attach();
+    }
+}
+```
 
 Install with NuGet:
 -
