@@ -7,12 +7,19 @@
     <UseWPF>true</UseWPF>
     <ApplicationIcon />
     <StartupObject />
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
     <Authors>Benoit Blanchon</Authors>
-    <Copyright>Copyright © Benoit Blanchon 2019</Copyright>
+    <Copyright>Copyright © Benoit Blanchon 2013-2019</Copyright>
     <Description>Throw an exception when a WPF Binding error occurs. Get started by adding WpfBindingErrors.BindingExceptionThrower.Attach(); to your WPF application.</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageReleaseNotes>Added NET Core 3.0 support</PackageReleaseNotes>
+    <PackageReleaseNotes>Added .NET Core 3.0 support</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/bblanchon/WpfBindingErrors</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/bblanchon/WpfBindingErrors</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>wpf xaml binding</PackageTags>
+    <PackageIconUrl>lice</PackageIconUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
