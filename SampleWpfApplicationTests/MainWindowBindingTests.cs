@@ -1,21 +1,20 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SampleWpfApplication;
 using WpfBindingErrors;
 using System.Windows;
+using Xunit;
 
 namespace SampleWpfApplicationTests
 {
-    [TestClass]
     public class MainWindowBindingTests
     {
-        [TestMethod]
+        [StaFact]
         public void MainWindow_Constructor_DoesNotThrow()
         {
             new MainWindow();
         }
 
-        [TestMethod]
+        [StaFact]
         public void MainWindow_HasNoBindingError()
         {
             // NB: this test must fail !
@@ -24,7 +23,7 @@ namespace SampleWpfApplicationTests
 
             using( var listener = new BindingErrorListener())
             {
-                listener.ErrorCatched += msg => Assert.Fail(msg);
+                listener.ErrorCatched += msg => throw new Exception(msg);
 
                 new MainWindow();
             }            
