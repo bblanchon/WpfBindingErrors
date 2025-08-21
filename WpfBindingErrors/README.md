@@ -1,44 +1,59 @@
 Turn WPF binding errors into exceptions
 =======================================
 
-This project is a reusable assembly that converts WPF binding errors into exceptions.
+A lightweight library that converts WPF binding errors into exceptions, so you can quickly spot errors in the XAML markup and detect them unit tests.
 
-Feel free to include it in your own project.
-    
+![Exception shown in Visual Studio](SampleWpfApplication/Pictures/XamlParseException.png)
+
+All it requires is a single line in your existing code:
+
+```csharp
+public partial class App : Application
+{
+    protected override void OnStartup(StartupEventArgs args)
+    {
+        base.OnStartup(args);
+        
+        // Start listening for WPF binding error.
+        // After that line, a BindingException will be thrown each time
+        // a binding error occurs.
+        BindingExceptionThrower.Attach();
+    }
+}
+```
+
+Installing:
+-----------
+
+With .NET CLI
+
+    > dotnet add package WpfBindingErrors
+
+With Package Manager:
+
+    PM> Install-Package WpfBindingErrors
+
+https://www.nuget.org/packages/WpfBindingErrors
+
+
 Content
 -------
 
- 1. Class `BindingException` is the typed exception thrown when a binding error occurs
- 2. Static class `BindingExceptionThrower` is the one that throws `BindingException`.
- 3. Class `BindingErrorListener` adds a listener to `PresentationTraceSources.DataBindingSource`. It raises the event `ErrorCatched` whenever a binding error occurs.
- 4. Class `ObservableTraceListener` is internal; it's an override of `System.Diagnostics.TraceListener` and it raises the event `TraceCatched` whenever a trace is written.
-     
-See an example in project `SampleWpfApplicationTests` in this repository.
-   
-Class diagram
--------------
-![Class diagram](Pictures/ClassDiagram.png)
+1. [Project WpfBindingError](WpfBindingErrors) is a reusable assembly that listens for binding errors.
+2. [Project SampleWpfApplication](SampleWpfApplication) shows how to throw `BindingException` at **runtime**.
+3. [Project SampleWpfApplicationTests](SampleWpfApplicationTests) shows how to check binding errors in a **unit test project**.
 
-How to use it?
---------------
+Each project contains a dedicated README with more detail.
 
-The simplest way is to use `BindingExceptionThrower` because it handles everything for you:
+Supported frameworks
+--------------------
 
-```csharp
-BindingExceptionThrower.Attach()
-```
-    
-That's all.  
-Once you called `Attach()`, every WPF binding error will raise a `BindingException`.
-See an example in project `SampleWpfApplication` in this repository.
+* .NET 8 (Windows)
+* .NET Framework 4.8
 
-However, if you want to be aware of binding errors without throwing an exception, you can use `BindingErrorListener`  and attach to the `ErrorCatched` event.
+Contributors
+------------
 
-```csharp
-using( var listener = new BindingErrorListener())
-{
-    listener.ErrorCatched += msg => Console.WriteLine("Binding error: {0}", msg);
-
-    // ...do what you want here...
-}
-```
+* [Gareth Brown](https://github.com/wonea)
+* [Bruno Juchli](https://github.com/jongleur1983)
+* [David Neale](https://github.com/davidneale)
