@@ -48,15 +48,12 @@ Each project contains a dedicated README with more detail.
 Supported frameworks
 --------------------
 
-* .NET Core 3.0 🆕
-* .NET Framework 4.6
-* .NET Framework 4.5.2
-* .NET Framework 4.5.1
-* .NET Framework 4.5
-* .NET Framework 4.0
+* .NET 8 (net8.0-windows) 🆕
+* .NET Framework 4.8 (net48) 🆕
 
 Contributors
 ------------
 
 * [Gareth Brown](https://github.com/wonea)
 * [Bruno Juchli](https://github.com/jongleur1983)
+* [David Neale](https://github.com/davidneale)
