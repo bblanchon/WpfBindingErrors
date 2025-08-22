@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFrameworks>netcoreapp3.0;net40;net45;net451;net452;net46</TargetFrameworks>
+    <TargetFrameworks>net8.0-windows;net48</TargetFrameworks>
     <RootNamespace>WpfBindingErrors</RootNamespace>
     <UseWPF>true</UseWPF>
     <ApplicationIcon />
@@ -12,7 +12,7 @@
     <Copyright>Copyright © Benoit Blanchon 2013-2019</Copyright>
     <Description>Throw an exception when a WPF Binding error occurs. Get started by adding WpfBindingErrors.BindingExceptionThrower.Attach(); to your WPF application.</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageReleaseNotes>Added .NET Core 3.0 support</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated to target .NET 8 and .NET Framework 4.8. These are current LTS versions.</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/bblanchon/WpfBindingErrors</PackageProjectUrl>
     <RepositoryUrl>https://github.com/bblanchon/WpfBindingErrors</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -20,10 +20,13 @@
     <PackageIconUrl>lice</PackageIconUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReadMeFile>README.md</PackageReadMeFile>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="Properties\" />
+    <None Include="README.md" Pack="True" PackagePath="\" />
   </ItemGroup>
 
 </Project>

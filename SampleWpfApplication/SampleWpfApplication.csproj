@@ -2,9 +2,10 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFrameworks>net8.0-windows;net48</TargetFrameworks>
     <RootNamespace>SampleWpfApplication</RootNamespace>
     <UseWPF>true</UseWPF>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>

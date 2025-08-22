@@ -9,7 +9,7 @@ namespace SampleWpfApplicationTests
     [TestClass]
     public class MainWindowBindingTests
     {
-        [TestMethod]
+        [STATestMethod]
         public void MainWindow_Constructor_DoesNotThrow()
         {
             new MainWindow();
